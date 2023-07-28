@@ -9,9 +9,14 @@ function formValidation(event) {
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
-    alert("Fill in all fields!");
+    return alert("Fill in all fields!");
   }
 
-  console.log(`Email: ${email.value} \nPassword: ${password.value}`);
+  const userLogin = {
+    email: email.value,
+    password: password.value,
+  };
+
+  console.log(userLogin);
   event.currentTarget.reset();
 }
